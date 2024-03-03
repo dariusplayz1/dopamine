@@ -78,7 +78,7 @@ local library = {
     open = false;
     opening = false;
     hasInit = false;
-    cheatname = startupArgs.cheatname or 'octohook';
+    cheatname = startupArgs.cheatname or 'dopamine';
     gamename = startupArgs.gamename or 'universal';
     fileext = startupArgs.fileext or '.txt';
 }
@@ -613,9 +613,9 @@ function library:init()
 
     local tooltipObjects = {};
 
-    makefolder(self.cheatname)
-    makefolder(self.cheatname..'/assets')
-    makefolder(self.cheatname..'/'..self.gamename)
+    makefolder(self.cheatname);
+    makefolder(self.cheatname..'/assets');
+    makefolder(self.cheatname..'/'..self.gamename);
     makefolder(self.cheatname..'/'..self.gamename..'/configs');
 
     function self:SetTheme(theme)
