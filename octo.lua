@@ -326,7 +326,7 @@ do
     function library:unload()
         for i,v in next, self.hooks do v:Remove() end
         for i,v in next, self.connections do v:Disconnect() end
-        for i,v in next, self.drawings.objects do v:Remove() end
+        for i,v in next, self.drawings do v:Remove() end
         for i,v in next, self.drawings.raw do v:Remove() end
         for i,v in next, self.instances do v:Destroy() end
         if library.screengui then
